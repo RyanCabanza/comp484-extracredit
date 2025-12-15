@@ -67,6 +67,9 @@ footer{
 .tableAlignTop{
 	vertical-align: top;
 }
+.mobile-hide{
+	display: none;
+}
 
 
 
@@ -103,9 +106,6 @@ nav{
 		height: auto;
 		max-widht: 100%;
 	}
-}
-.mobile-hide{
-	display: none;
 }
 #hamburgerCell{
 	display: table-cell;
@@ -228,7 +228,38 @@ tr.menuDivider td{
 
 /* Locations Page
 ----------------------------------- */
-
+.locations-container{
+	max-width: 1366px;
+	margin: 0 auto;
+	border-top: 2px solid #82d0d2;
+}
+.location-img{
+	text-align: center;
+	img{
+		max-width: 740px;
+		height: auto;
+		width: 100%;
+		padding: 25px 20px 0px 20px;
+	}
+}
+.location-map{
+	text-align: center;
+	padding: 20px 20px 0px 20px;
+	iframe{
+		max-width: 700px;
+		width: 100%;
+		height: 115px;
+	}
+}
+.locations-desc{
+	max-width: 740px;
+	padding: 20px;
+	margin: 0px auto;
+	padding-bottom: 100px;
+}
+.address{
+	padding-bottom: 5px;
+}
 
 
 /*------------------------------------*/
@@ -304,6 +335,7 @@ output {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
 
+	
 
 	
 	/* Navigation
@@ -362,7 +394,7 @@ output {
 	}
 	/*------------------------------------*/
 
-	
+
 
 }
 
@@ -423,6 +455,37 @@ output {
 	}
 	/*------------------------------------*/
 
+
+
+	/* Locations Page
+	----------------------------------- */
+
+	.locations-container{
+		display: flex;
+	}
+
+	.location-img{
+		margin-right: 20px;
+		margin-left: auto;
+		img{
+			padding: 50px 0px 20px 0px;
+		}
+	}
+
+	.location-map{
+		margin-right: auto;
+		margin-left: 20px;
+		padding: 50px 0px 20px 0px;
+		iframe{
+			height: 100%;
+		}
+	}
+
+	.locations-desc{
+		max-width: 1366px;
+		margin: 0 auto;
+		display: flex;
+	}
 
 
 }
