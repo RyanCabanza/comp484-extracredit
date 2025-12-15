@@ -22,6 +22,56 @@ div{
 	max-width: 1366px;
 	margin: 0 auto;
 }
+button{ 
+	margin-top: 15px; 
+	padding: 10px 20px; 
+	background: #82d0d2;
+	color: white; border: none; 
+	font-weight: bold;
+	cursor: pointer; 
+	border-radius: 25px;
+}
+button:hover { 
+	background: #2ea6ba; 
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: 400;
+}
+a:hover{
+	color: #2ea6ba;
+}
+
+h1, h2, h3{
+	color: #543134;
+}
+h1, h2, h3{
+	color: #543134;
+}
+footer{
+	border-top: 2px solid #82d0d2;
+	text-align: center;
+	width: 100%;
+	margin: 0px auto;
+	font-weight: 200;
+	padding-bottom: 5px;
+	background-color: #fff;
+}
+.pageHeader{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+}
+.tableAlignTop{
+	vertical-align: top;
+}
+
+
+
+/* Navigation
+----------------------------------- */
 nav{
 	max-width: 1366px;
 	margin: 0px auto;
@@ -62,30 +112,10 @@ nav{
 	text-align: right;
 	padding-right: 20px;
 }
-button{ 
-	margin-top: 15px; 
-	padding: 10px 20px; 
-	background: #82d0d2;
-	color: white; border: none; 
-	font-weight: bold;
-	cursor: pointer; 
-	border-radius: 25px;
-}
-button:hover { 
-	background: #2ea6ba; 
-}
 #hamburgerBtn{
 	display: inline-block;
 	border: none;
 	background-color: transparent;
-}
-a{
-	color: #fff;
-	text-decoration: none;
-	font-weight: 400;
-}
-a:hover{
-	color: #2ea6ba;
 }
 #mobileMenu {
     display: none;
@@ -103,29 +133,7 @@ a:hover{
 #mobileMenu a:last-child {
     border-bottom: none;
 }
-h1, h2, h3{
-	color: #543134;
-}
-h1, h2, h3{
-	color: #543134;
-}
-footer{
-	border-top: 2px solid #82d0d2;
-	text-align: center;
-	width: 100%;
-	margin: 0px auto;
-	font-weight: 200;
-	padding-bottom: 5px;
-	background-color: #fff;
-}
-.pageHeader{
-	padding-top: 40px;
-	padding-bottom: 40px;
-	text-align: center;
-}
-.tableAlignTop{
-	vertical-align: top;
-}
+/*------------------------------------*/
 
 
 
