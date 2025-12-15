@@ -7,7 +7,7 @@
 		<link rel="icon" href="_images/favicon.png">
 
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="_css/styles.css">
+		<link rel="stylesheet" type="text/css" href="_css/styles2.css">
 
 		<!-- FONT PACKAGES -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,47 +16,81 @@
 		<link rel="stylesheet" href="https://use.typekit.net/qdx6pfj.css">
 	</head>
 	<body>
-		<div id="container">
+		<div class="container-fluid">
 			<div id="banner">
 				<img src="_images/MW-MainLogo.svg">
 			</div>
-			<nav>
-				<table id="navTable">
-					<tr>
-						<td id="navLogo"><a href="index.html"><img src="_images/MW-NavLogo.svg"></a></td>
-						<td>
-							<table id="navLinks">
-								<td><a href="index.html"><h5>HOME</h5></a></td>
-								<td><a href="menu.html"><h5>MENU</h5></a></td>
-								<td><a href="locations.html"><h5>LOCATIONS</h5></a></td>
-								<td><a href="careers.html"><h5>CAREERS</h5></a></td>
-							</table>
-						</td>
-					</tr>
-				</table>
-			</nav>
+			<div id="nav-container">
+				<nav>
+					<table id="navTable">
+						<tr>
+							<td id="navLogo"><a href="index.html"><img src="_images/MW-NavLogo.svg"></a></td>
+							<td id="hamburgerCell">
+								<button id="hamburgerBtn">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+										<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+									</svg>
+								</button>
+							</td>
+							<td class="mobile-hide">
+								<table id="navLinks">
+									<td><a href="index.html"><h5>HOME</h5></a></td>
+									<td><a href="menu.html"><h5>MENU</h5></a></td>
+									<td><a href="locations.html"><h5>LOCATIONS</h5></a></td>
+									<td><a href="careers.html"><h5>CAREERS</h5></a></td>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<div id="mobileMenu">
+						<a href="index.html">Home</a>
+					    <a href="menu.html">Menu</a>
+					    <a href="locations.html">Locations</a>
+					    <a href="careers.html">Careers</a>
+					</div>
+				</nav>
+			</div>
 			<div id="intro">
 				<h3 class="accessFont">Hello There!</h3>
 				<h1>Take a sip beyond the stars...</h1>
 				<p>Embark on an intergalactic adventure — destination set for the coziest place in the galaxy. <b>Milky Way Tea Station</b> is a space-themed boba shop and café where every drink is an immersive experience leading to uncharted worlds.</p>
 			</div>
-			<div id="galaxy">
-				<img src="_images/index-image1.png">
-				<h2>A Galaxy Full of Flavor</h2>
-				<p>At Milky Way Tea Station, every order represents a different celestial destination, whether it's a vibrant planet, mysterious moon, or blazing sun. From milk teas and smoothies to acai bowls and slushes, we have a variety of choices perfect for any lifeform!</p>
-				<a href="menu.html"><button>View Menu</button></a>
+			<div id="galaxy-container">
+				<div id="galaxy-img">
+					<img src="_images/index-image1.png">
+				</div>
+				<div id="galaxy-text">
+					<h2>A Galaxy Full of Flavor</h2>
+					<p>At Milky Way Tea Station, every order represents a different celestial destination, whether it's a vibrant planet, mysterious moon, or blazing sun. From milk teas and smoothies to acai bowls and slushes, we have a variety of choices perfect for any lifeform!</p>
+					<a href="menu.html"><button>View Menu</button></a>
+				</div>
 			</div>
-			<div id="ourMission">
-				<img src="_images/index-image2.png">
-				<h2>Our Mission</h2>
-				 <p>We welcome every customer who has a heart for exploration. Whether you’re here for a cosmic caffeine boost or just passing through on a flavor-fueled space quest, one thing’s for certain: every walk of the galaxy is welcome aboard.</p> 
-			</div>
-			<div class="spacer">
-
+			<div id="mission-container">
+				<div id="mission-text">
+					<h2>Our Mission</h2>
+					<p>We welcome every customer who has a heart for exploration. Whether you’re here for a cosmic caffeine boost or just passing through on a flavor-fueled space quest, one thing’s for certain: every walk of the galaxy is welcome aboard.</p> 
+				</div>
+				<div id="mission-img">
+					<img src="_images/index-image2.png">
+				</div>
 			</div>
 		</div>
+		
 		<footer>
 			<p>Designed and developed by Ryan Cabanza</p>
 		</footer>
+
+		<script>
+		document.addEventListener("DOMContentLoaded", () => {
+		    const btn = document.getElementById("hamburgerBtn");
+		    const menu = document.getElementById("mobileMenu");
+
+		    if (btn) {
+		        btn.addEventListener("click", () => {
+		            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+		        });
+		    }
+		});
+		</script>
 	</body>
 </html>

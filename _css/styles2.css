@@ -18,6 +18,10 @@ div{
 .container-fluid{
 	width: 100%;
 }
+.container{
+	max-width: 1366px;
+	margin: 0 auto;
+}
 nav{
 	max-width: 1366px;
 	margin: 0px auto;
@@ -57,6 +61,18 @@ nav{
 	display: table-cell;
 	text-align: right;
 	padding-right: 20px;
+}
+button{ 
+	margin-top: 15px; 
+	padding: 10px 20px; 
+	background: #82d0d2;
+	color: white; border: none; 
+	font-weight: bold;
+	cursor: pointer; 
+	border-radius: 25px;
+}
+button:hover { 
+	background: #2ea6ba; 
 }
 #hamburgerBtn{
 	display: inline-block;
@@ -109,40 +125,39 @@ footer{
 	display: none;
 }
 #intro{
-	margin-top: 100px;
-	margin-bottom: 100px;
+	margin-top: 75px;
+	margin-bottom: 50px;
 	text-align: center;
+	padding: 0px 50px;
 	p{
-		width: 600px;
+		max-width: 600px;
 		margin: 0 auto;
+		width: 100%;
 	}
 }
-#galaxy, #ourMission{
-	padding-left: 150px;
-	padding-right: 150px;
+#galaxy-container, #mission-container{
+	display: flex;
+	max-width: 1366px;
+	justify-content: center;
+	align-items: center;
 }
-#galaxy{
-	margin-bottom: 200px;
-	h2{
-		padding-top: 100px;
-	}
+#galaxy-container{
+	flex-direction: column;
+}
+#mission-container{
+	flex-direction: column-reverse;
+}
+#galaxy-img, #mission-img{
 	img{
-		float: left;
-		margin-right: 100px;
 		width: 400px;
 		height: auto;
 	}
 }
-#ourMission{
-	h2{
-		padding-top: 150px;
-	}
-	img{
-		float: right;
-		margin-left: 100px;
-		width: 400px;
-		height: auto;
-	}
+#galaxy-img, #mission-img{
+	padding: 0px 50px 0px 50px;
+}
+#galaxy-text, #mission-text{
+	padding: 0px 50px 100px 50px;
 }
 /*------------------------------------*/
 
@@ -264,12 +279,41 @@ output {
 	.mobile-hide{
 		display: block;
 	}
+	#intro{
+		margin-top: 100px;
+	}
 	
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-	
+
+	#galaxy-container, #mission-container{
+		display: flex;
+		flex-direction: row;
+		max-width: 1366px;
+		justify-content: center;
+		align-items: center;
+	}
+	#galaxy-img, #mission-img{
+		img{
+			width: 400px;
+			height: auto;
+		}
+	}
+	#galaxy-img{
+		padding: 50px 50px 0px 150px;
+	}
+	#mission-img{
+		padding: 0px 150px 50px 50px;
+	}
+	#galaxy-text{
+		padding: 0px 150px 0px 50px;
+	}
+	#mission-text{
+		padding: 50px 50px 50px 150px;
+	}
+
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
