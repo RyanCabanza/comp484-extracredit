@@ -106,5 +106,18 @@
 		<footer>
 			<p>Designed and developed by Ryan Cabanza</p>
 		</footer>
+
+		<script>
+		document.addEventListener("DOMContentLoaded", () => {
+		    const btn = document.getElementById("hamburgerBtn");
+		    const menu = document.getElementById("mobileMenu");
+
+		    if (btn) {
+		        btn.addEventListener("click", () => {
+		            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+		        });
+		    }
+		});
+		</script>
 	</body>
 </html>
