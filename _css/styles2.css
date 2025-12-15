@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 body{
 	font-family: "Geologica", sans-serif;
 	background-color: #eee;
@@ -6,12 +12,18 @@ div{
 	/*outline: solid red 1px;*/
 	margin: 0px auto;
 }
-#container{
-	width: 1366px;
-	margin: 0px auto;
-	background-color: #fff;
+.test{
+	height: 1000px;
+}
+.container-fluid{
+	width: 100%;
 }
 nav{
+	max-width: 1366px;
+	margin: 0px auto;
+}
+#nav-container{
+	width: 100%;
 	background-color: #82d0d2;
 	position: sticky;
 	top: 0px;
@@ -28,19 +40,28 @@ nav{
 	padding: 10px 20px;
 }
 #navTable{
-	width: 1366px;
+	width: 100%;
+	max-width: 1366px;
+	margin: 0 auto;
 	table-layout: fixed;
 	img{
 		width: 285px;
 		height: auto;
+		max-widht: 100%;
 	}
 }
-#navLinks{
-	margin-left: auto;
-	margin-right: 0;
+.mobile-hide{
+	display: none;
 }
-h1, h2, h3{
-	color: #543134;
+#hamburgerCell{
+	display: table-cell;
+	text-align: right;
+	padding-right: 20px;
+}
+#hamburgerBtn{
+	display: inline-block;
+	border: none;
+	background-color: transparent;
 }
 a{
 	color: #fff;
@@ -50,62 +71,42 @@ a{
 a:hover{
 	color: #2ea6ba;
 }
-.spacer{
-	padding-top: 200px;
+#mobileMenu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    text-align: center;
 }
-.spacer2{
-	padding-top: 100px;
+#mobileMenu a {
+	color: #2ea6ba;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+}
+#mobileMenu a:last-child {
+    border-bottom: none;
+}
+h1, h2, h3{
+	color: #543134;
+}
+h1, h2, h3{
+	color: #543134;
 }
 footer{
 	border-top: 2px solid #82d0d2;
 	text-align: center;
-	width: 1366px;
+	width: 100%;
 	margin: 0px auto;
 	font-weight: 200;
 	padding-bottom: 5px;
 	background-color: #fff;
 }
-.pageHeader{
-	padding-top: 40px;
-	padding-bottom: 40px;
-	text-align: center;
-}
-.tableAlignTop{
-	vertical-align: top;
-}
-button{ 
-	margin-top: 15px; 
-	padding: 10px 20px; 
-	background: #82d0d2;
-	color: white; border: none; 
-	font-weight: bold;
-	cursor: pointer; 
-	border-radius: 25px;
-}
-button:hover { 
-	background: #2ea6ba; 
-}
-.accessFont{
-	font-weight: 400;
-	color: #e1b78e;
-}
 
 
 /*-----------INDEX PAGE CSS-----------*/
 #banner{
-	height: 500px;
-	background:
-	linear-gradient(rgba(0, 0, 0, 0) 35%, rgba(130, 208, 210, 1)),
-    url("../_images/MW-BannerImage.jpg") 
-    no-repeat fixed center center/ cover;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	img{
-		width: 600px;
-		height: auto;
-		/*filter: drop-shadow(0px 35px 100px #ccc);*/
-	}
+	display: none;
 }
 #intro{
 	margin-top: 100px;
@@ -223,3 +224,60 @@ output {
 	border: 1px solid #ccc; 
 }
 /*------------------------------------*/
+
+
+
+/* Media Queries
+----------------------------------- */
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+
+	#banner{
+		height: 500px;
+		background:
+		linear-gradient(rgba(0, 0, 0, 0) 35%, rgba(130, 208, 210, 1)),
+	    url("../_images/MW-BannerImage.jpg") 
+	    no-repeat fixed center center/ cover;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img{
+			width: 600px;
+			height: auto;
+			/*filter: drop-shadow(0px 35px 100px #ccc);*/
+		}
+	}
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	
+	#navLinks{
+		margin-left: auto;
+		margin-right: 0;
+	}
+	#hamburgerCell{
+		display: none;
+	}
+	.mobile-hide{
+		display: block;
+	}
+	
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+
+}
