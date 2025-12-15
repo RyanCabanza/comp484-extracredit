@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 body{
 	font-family: "Geologica", sans-serif;
 	background-color: #eee;
@@ -6,12 +12,76 @@ div{
 	/*outline: solid red 1px;*/
 	margin: 0px auto;
 }
-#container{
-	width: 1366px;
-	margin: 0px auto;
+.test{
+	height: 1000px;
+}
+.container-fluid{
+	width: 100%;
 	background-color: #fff;
 }
+.container{
+	max-width: 1366px;
+	margin: 0 auto;
+}
+button{ 
+	margin-top: 15px; 
+	padding: 10px 20px; 
+	background: #82d0d2;
+	color: white; border: none; 
+	font-weight: bold;
+	cursor: pointer; 
+	border-radius: 25px;
+}
+button:hover { 
+	background: #2ea6ba; 
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: 400;
+}
+a:hover{
+	color: #2ea6ba;
+}
+
+h1, h2, h3{
+	color: #543134;
+}
+h1, h2, h3{
+	color: #543134;
+}
+footer{
+	border-top: 2px solid #82d0d2;
+	text-align: center;
+	width: 100%;
+	margin: 0px auto;
+	font-weight: 200;
+	padding-bottom: 5px;
+	background-color: #fff;
+}
+.pageHeader{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+}
+.tableAlignTop{
+	vertical-align: top;
+}
+.mobile-hide{
+	display: none;
+}
+
+
+
+/* Navigation
+----------------------------------- */
 nav{
+	max-width: 1366px;
+	margin: 0px auto;
+}
+#nav-container{
+	width: 100%;
 	background-color: #82d0d2;
 	position: sticky;
 	top: 0px;
@@ -28,130 +98,100 @@ nav{
 	padding: 10px 20px;
 }
 #navTable{
-	width: 1366px;
+	width: 100%;
+	max-width: 1366px;
+	margin: 0 auto;
 	table-layout: fixed;
 	img{
 		width: 285px;
 		height: auto;
+		max-widht: 100%;
 	}
 }
-#navLinks{
-	margin-left: auto;
-	margin-right: 0;
+#hamburgerCell{
+	display: table-cell;
+	text-align: right;
+	padding-right: 20px;
 }
-h1, h2, h3{
-	color: #543134;
+#hamburgerBtn{
+	display: inline-block;
+	border: none;
+	background-color: transparent;
 }
-a{
-	color: #fff;
-	text-decoration: none;
-	font-weight: 400;
+#mobileMenu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    text-align: center;
 }
-a:hover{
-	color: #2ea6ba;
+#mobileMenu a {
+	color: #82d0d2;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
 }
-.spacer{
-	padding-top: 200px;
-}
-.spacer2{
-	padding-top: 100px;
-}
-footer{
-	border-top: 2px solid #82d0d2;
-	text-align: center;
-	width: 1366px;
-	margin: 0px auto;
-	font-weight: 200;
-	padding-bottom: 5px;
-	background-color: #fff;
-}
-.pageHeader{
-	padding-top: 40px;
-	padding-bottom: 40px;
-	text-align: center;
-}
-.tableAlignTop{
-	vertical-align: top;
-}
-button{ 
-	margin-top: 15px; 
-	padding: 10px 20px; 
-	background: #82d0d2;
-	color: white; border: none; 
-	font-weight: bold;
-	cursor: pointer; 
-	border-radius: 25px;
-}
-button:hover { 
-	background: #2ea6ba; 
-}
-.accessFont{
-	font-weight: 400;
-	color: #e1b78e;
-}
-
-
-/*-----------INDEX PAGE CSS-----------*/
-#banner{
-	height: 500px;
-	background:
-	linear-gradient(rgba(0, 0, 0, 0) 35%, rgba(130, 208, 210, 1)),
-    url("../_images/MW-BannerImage.jpg") 
-    no-repeat fixed center center/ cover;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	img{
-		width: 600px;
-		height: auto;
-		/*filter: drop-shadow(0px 35px 100px #ccc);*/
-	}
-}
-#intro{
-	margin-top: 100px;
-	margin-bottom: 100px;
-	text-align: center;
-	p{
-		width: 600px;
-		margin: 0 auto;
-	}
-}
-#galaxy, #ourMission{
-	padding-left: 150px;
-	padding-right: 150px;
-}
-#galaxy{
-	margin-bottom: 200px;
-	h2{
-		padding-top: 100px;
-	}
-	img{
-		float: left;
-		margin-right: 100px;
-		width: 400px;
-		height: auto;
-	}
-}
-#ourMission{
-	h2{
-		padding-top: 150px;
-	}
-	img{
-		float: right;
-		margin-left: 100px;
-		width: 400px;
-		height: auto;
-	}
+#mobileMenu a:last-child {
+    border-bottom: none;
 }
 /*------------------------------------*/
 
 
-/*-----------MENU PAGE CSS------------*/
+
+/* Index Page
+----------------------------------- */
+#banner{
+	display: none;
+}
+#intro{
+	margin-top: 75px;
+	margin-bottom: 50px;
+	text-align: center;
+	padding: 0px 50px;
+	p{
+		max-width: 600px;
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+#galaxy-container, #mission-container{
+	display: flex;
+	max-width: 1366px;
+	justify-content: center;
+	align-items: center;
+}
+#galaxy-container{
+	flex-direction: column;
+}
+#mission-container{
+	flex-direction: column-reverse;
+}
+#galaxy-img, #mission-img{
+	img{
+		width: 400px;
+		height: auto;
+	}
+}
+#galaxy-img, #mission-img{
+	padding: 0px 50px 0px 50px;
+}
+#galaxy-text, #mission-text{
+	padding: 0px 50px 100px 50px;
+}
+.spacer2{
+	padding-top: 100px;
+}
+/*------------------------------------*/
+
+
+/* Menu Page
+----------------------------------- */
 #menu{
+	max-width: 1366px;
 	table{
 		text-align: center;
 		table-layout: fixed;
-		width: 1280px;
+		width: 100%;
 		margin: 0 auto;
 		border-collapse: collapse;
 		img{
@@ -167,42 +207,72 @@ button:hover {
 	}
 }
 tr.menuDivider td{
-	border-top: solid 2px #82d0d2;
+	border-top: none;
+}
+#menu table tr{
+	display: block;
+}
+#menu table td{
+	display: block;
+	width: 100%;
+	padding: 15px 0;
+}
+#menu table td.tableAlignTop{
+	padding-top: 25px;
+	border-top: 2px solid #82d0d2;
 }
 /*------------------------------------*/
 
 
-/*---------LOCATIONS PAGE CSS---------*/
-#locations{
-	table{
-		margin: 0 auto;
-		border-collapse: collapse;
-		border-top: solid 2px #82d0d2;
-		img{
-			/*padding-top: 20px;*/
-			width: 740px;
-			height: auto;
-		}
-		iframe{
-			padding: 20px;
-		}
+/* Locations Page
+----------------------------------- */
+.locations-container{
+	max-width: 1366px;
+	margin: 0 auto;
+	border-top: 2px solid #82d0d2;
+}
+.location-img{
+	text-align: center;
+	img{
+		max-width: 740px;
+		height: auto;
+		width: 100%;
+		padding: 25px 20px 0px 20px;
 	}
 }
+.location-map{
+	text-align: center;
+	padding: 20px 20px 0px 20px;
+	iframe{
+		max-width: 700px;
+		width: 100%;
+		height: 115px;
+	}
+}
+.locations-desc{
+	max-width: 740px;
+	padding: 20px;
+	margin: 0px auto;
+	padding-bottom: 100px;
+}
+.address{
+	padding-bottom: 5px;
+}
+
+
 /*------------------------------------*/
 
 
 
-/*----------CAREERS PAGE CSS----------*/
+/* Careers Page
+----------------------------------- */
 #careers{
-	table{
-		padding-top: 40px;
-		margin: 0 auto;
-		table-layout: fixed;
-		width: 1280px;
-	}
+	max-width: 1280px;
+	display: block;
+	padding: 50px 25px 0px 25px;
 }
-#formContainer{
-	padding-left: 40px;
+#careers-desc{
+	padding-bottom: 20px;
 }
 fieldset{ 
 	border: 1px solid #ccc; 
@@ -223,3 +293,222 @@ output {
 	border: 1px solid #ccc; 
 }
 /*------------------------------------*/
+
+
+
+/* Media Queries
+----------------------------------- */
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+
+
+
+	/* Index Page
+	----------------------------------- */
+	#banner{
+		height: 500px;
+		background:
+		linear-gradient(rgba(0, 0, 0, 0) 35%, rgba(130, 208, 210, 1)),
+	    url("../_images/MW-BannerImage.jpg") 
+	    no-repeat fixed center center/ cover;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img{
+			width: 600px;
+			height: auto;
+			/*filter: drop-shadow(0px 35px 100px #ccc);*/
+		}
+	}
+	/*------------------------------------*/
+
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+	
+
+	
+	/* Navigation
+	----------------------------------- */
+	#navLinks{
+		margin-left: auto;
+		margin-right: 0;
+	}
+	#hamburgerCell{
+		display: none;
+	}
+	.mobile-hide{
+		display: block;
+	}
+	/*------------------------------------*/
+
+
+
+	/* Index Page
+	----------------------------------- */
+	#intro{
+		margin-top: 100px;
+	}
+	/*------------------------------------*/
+
+	
+
+	/* Menu Page
+	----------------------------------- */
+	#menu table tr{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	#menu table td{
+		display: block;
+		flex: 1 1 50%;
+		padding: 20px 10px;
+	}
+
+	/* Category header cells should span entire row */
+	#menu table td.tableAlignTop{
+		flex: 1 1 100%;
+		text-align: center;
+	}
+
+	/* Adjust the divider row to work with flex */
+	tr.menuDivider td{
+		border-top: none;
+	}
+
+	tr.menuDivider td.tableAlignTop{
+		border-top: 2px solid #82d0d2;
+		margin-top: 20px;
+		padding-top: 20px;
+	}
+	/*------------------------------------*/
+
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+
+
+	/* Index Page
+	----------------------------------- */
+	#galaxy-container, #mission-container{
+		display: flex;
+		flex-direction: row;
+		max-width: 1366px;
+		justify-content: center;
+		align-items: center;
+	}
+	#galaxy-img, #mission-img{
+		img{
+			width: 400px;
+			height: auto;
+		}
+	}
+	#galaxy-img{
+		padding: 50px 50px 0px 150px;
+	}
+	#mission-img{
+		padding: 0px 150px 50px 50px;
+	}
+	#galaxy-text{
+		padding: 0px 150px 0px 50px;
+	}
+	#mission-text{
+		padding: 50px 50px 50px 150px;
+	}
+	/*------------------------------------*/
+
+
+
+	/* Menu Page
+	----------------------------------- */
+	#menu table tr{
+		display: table-row;
+	}
+
+	#menu table td{
+		display: table-cell;
+		width: auto;
+		padding: 20px;
+	}
+
+	#menu table{
+		table-layout: fixed;
+	}
+
+	tr.menuDivider td{
+		border-top: 2px solid #82d0d2;
+	}
+	/*------------------------------------*/
+
+
+
+	/* Locations Page
+	----------------------------------- */
+
+	.locations-container{
+		display: flex;
+	}
+
+	.location-img{
+		margin-right: 20px;
+		margin-left: auto;
+		img{
+			padding: 50px 0px 20px 0px;
+		}
+	}
+
+	.location-map{
+		margin-right: auto;
+		margin-left: 20px;
+		padding: 50px 0px 20px 0px;
+		iframe{
+			height: 100%;
+		}
+	}
+
+	.locations-desc{
+		max-width: 1366px;
+		margin: 0 auto;
+		display: flex;
+	}
+	/*------------------------------------*/
+
+
+
+	/* Careers Page
+	----------------------------------- */
+	#careers{
+		display: flex;
+	}
+	#form-container{
+		padding-left: 40px;
+		width: 100%;
+	}
+	#careers-desc{
+		padding-right: 40px;
+	}
+	/*------------------------------------*/
+
+
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+
+}
