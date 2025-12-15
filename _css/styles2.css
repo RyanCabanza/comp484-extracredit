@@ -95,7 +95,7 @@ a:hover{
     text-align: center;
 }
 #mobileMenu a {
-	color: #2ea6ba;
+	color: #82d0d2;
     padding: 15px;
     border-bottom: 1px solid #eee;
     font-size: 18px;
@@ -127,7 +127,10 @@ footer{
 	vertical-align: top;
 }
 
-/*-----------INDEX PAGE CSS-----------*/
+
+
+/* Index Page
+----------------------------------- */
 #banner{
 	display: none;
 }
@@ -172,7 +175,8 @@ footer{
 /*------------------------------------*/
 
 
-/*-----------MENU PAGE CSS------------*/
+/* Menu Page
+----------------------------------- */
 #menu{
 	max-width: 1366px;
 	table{
@@ -214,27 +218,17 @@ tr.menuDivider td{
 /*------------------------------------*/
 
 
-/*---------LOCATIONS PAGE CSS---------*/
-#locations{
-	table{
-		margin: 0 auto;
-		border-collapse: collapse;
-		border-top: solid 2px #82d0d2;
-		img{
-			/*padding-top: 20px;*/
-			width: 740px;
-			height: auto;
-		}
-		iframe{
-			padding: 20px;
-		}
-	}
-}
+/* Locations Page
+----------------------------------- */
+
+
+
 /*------------------------------------*/
 
 
 
-/*----------CAREERS PAGE CSS----------*/
+/* Careers Page
+----------------------------------- */
 #careers{
 	table{
 		padding-top: 40px;
@@ -274,6 +268,10 @@ output {
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) { 
 
+
+
+	/* Index Page
+	----------------------------------- */
 	#banner{
 		height: 500px;
 		background:
@@ -289,12 +287,19 @@ output {
 			/*filter: drop-shadow(0px 35px 100px #ccc);*/
 		}
 	}
+	/*------------------------------------*/
+
+
 
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+
+
 	
+	/* Navigation
+	----------------------------------- */
 	#navLinks{
 		margin-left: auto;
 		margin-right: 0;
@@ -305,11 +310,21 @@ output {
 	.mobile-hide{
 		display: block;
 	}
+	/*------------------------------------*/
+
+
+
+	/* Index Page
+	----------------------------------- */
 	#intro{
 		margin-top: 100px;
 	}
+	/*------------------------------------*/
 
-	/* Turn rows into flex rows so we can get 2 columns */
+	
+
+	/* Menu Page
+	----------------------------------- */
 	#menu table tr{
 		display: flex;
 		flex-wrap: wrap;
@@ -337,12 +352,19 @@ output {
 		margin-top: 20px;
 		padding-top: 20px;
 	}
+	/*------------------------------------*/
+
 	
+
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
 
+
+
+	/* Index Page
+	----------------------------------- */
 	#galaxy-container, #mission-container{
 		display: flex;
 		flex-direction: row;
@@ -368,8 +390,12 @@ output {
 	#mission-text{
 		padding: 50px 50px 50px 150px;
 	}
+	/*------------------------------------*/
 
-	/* Go back to standard table layout */
+
+
+	/* Menu Page
+	----------------------------------- */
 	#menu table tr{
 		display: table-row;
 	}
@@ -380,7 +406,6 @@ output {
 		padding: 20px;
 	}
 
-	/* Let your original table-layout handling do its thing */
 	#menu table{
 		table-layout: fixed;
 	}
@@ -388,6 +413,9 @@ output {
 	tr.menuDivider td{
 		border-top: 2px solid #82d0d2;
 	}
+	/*------------------------------------*/
+
+
 
 }
 
