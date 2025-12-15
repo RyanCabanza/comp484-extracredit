@@ -118,7 +118,14 @@ footer{
 	padding-bottom: 5px;
 	background-color: #fff;
 }
-
+.pageHeader{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+}
+.tableAlignTop{
+	vertical-align: top;
+}
 
 /*-----------INDEX PAGE CSS-----------*/
 #banner{
@@ -159,15 +166,19 @@ footer{
 #galaxy-text, #mission-text{
 	padding: 0px 50px 100px 50px;
 }
+.spacer2{
+	padding-top: 100px;
+}
 /*------------------------------------*/
 
 
 /*-----------MENU PAGE CSS------------*/
 #menu{
+	max-width: 1366px;
 	table{
 		text-align: center;
 		table-layout: fixed;
-		width: 1280px;
+		width: 100%;
 		margin: 0 auto;
 		border-collapse: collapse;
 		img{
@@ -183,7 +194,22 @@ footer{
 	}
 }
 tr.menuDivider td{
-	border-top: solid 2px #82d0d2;
+	border-top: none;
+}
+#menu table tr{
+	display: block;
+}
+
+#menu table td{
+	display: block;
+	width: 100%;
+	padding: 15px 0;
+}
+
+/* Category labels (MILK TEA / ACAI BOWL) still full-width headings */
+#menu table td.tableAlignTop{
+	padding-top: 25px;
+	border-top: 2px solid #82d0d2;
 }
 /*------------------------------------*/
 
@@ -282,6 +308,35 @@ output {
 	#intro{
 		margin-top: 100px;
 	}
+
+	/* Turn rows into flex rows so we can get 2 columns */
+	#menu table tr{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	#menu table td{
+		display: block;
+		flex: 1 1 50%;
+		padding: 20px 10px;
+	}
+
+	/* Category header cells should span entire row */
+	#menu table td.tableAlignTop{
+		flex: 1 1 100%;
+		text-align: center;
+	}
+
+	/* Adjust the divider row to work with flex */
+	tr.menuDivider td{
+		border-top: none;
+	}
+
+	tr.menuDivider td.tableAlignTop{
+		border-top: 2px solid #82d0d2;
+		margin-top: 20px;
+		padding-top: 20px;
+	}
 	
 }
 
@@ -312,6 +367,26 @@ output {
 	}
 	#mission-text{
 		padding: 50px 50px 50px 150px;
+	}
+
+	/* Go back to standard table layout */
+	#menu table tr{
+		display: table-row;
+	}
+
+	#menu table td{
+		display: table-cell;
+		width: auto;
+		padding: 20px;
+	}
+
+	/* Let your original table-layout handling do its thing */
+	#menu table{
+		table-layout: fixed;
+	}
+
+	tr.menuDivider td{
+		border-top: 2px solid #82d0d2;
 	}
 
 }
